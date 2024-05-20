@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./CSS//style.css">
+    <!-- website icon -->
+    <link rel="icon" href="../images/favicon-32x32.png">
+
+    <!-- leaflet script -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<!-- main script -->
+<script defer src="./JS/main.js"></script>
+</head>
+<body>
+    <!-- IP ADDRESS TRACKER -->
+    <main class="gen__ui">
+        <div class="upper_img">
+            <!-- mobile design img -->
+            <img src="../images/pattern-bg-mobile.png" alt="mobile design img" class="mobile">
+            <!-- desktop -->
+            <img src="../images//pattern-bg-desktop.png" alt="desktop" class="desktop">
+        </div>
+        <section class="ui_content">
+            
+            <!-- location info card -->
+            <div class="ip_address_form">
+                <h2 class="ui__text">IP Address Tracker</h2>
+                <form action="#" class="form-container">
+                    <input id="input_ip_address" name="input_ip_address" type="text">
+                    <button type="submit" class="submit-btn">
+                        <img src="../images/icon-arrow.svg" alt="" class="btn-img">
+                    </button>
+                </form>
+            </div>
+            
+            <!-- location card -->
+            <section class="location__card">
+                <!-- ip address -->
+                <div class="location-info--subheader">
+                    <h6>IP ADDRESS</h6>
+                    <p class="location-info-contents">192.212.174.101</p>
+                </div>
+                <!-- location -->
+                <div class="location-info--subheader">
+                    <h6>IP ADDRESS</h6>
+                    <p class="location-info-contents">192.212.174.101</p>
+                </div>
+                
+                <!-- timezone -->
+                <div class="location-info--subheader">
+                    <h6>IP ADDRESS</h6>
+                    <p class="location-info-contents">192.212.174.101</p>
+                </div>
+                
+                <!-- isp -->
+                <div class="location-info--subheader">
+                    <h6>IP ADDRESS</h6>
+                    <p class="location-info-contents">192.212.174.101</p>
+            </div>
+            
+        </section>
+
+    </section>
+    <!-- ui content ends here -->
+
+        <section>
+            <div id="show-map" class="show-map">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- js starts here -->
+    
+</body>
+</html>
