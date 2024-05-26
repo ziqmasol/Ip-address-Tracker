@@ -144,7 +144,7 @@ callingIpAddress("129.205.113.179")
 btn.addEventListener("click" , function(e){
     e.preventDefault()
     callingIpAddress(userIpAddressInput.value.trim())
-    // userIpAddressInput.value = ' '
+    userIpAddressInput.value = ' '
     
 })
 
