@@ -33,7 +33,7 @@
             <div class="ip_address_form">
                 <h2 class="ui__text">IP Address Tracker</h2>
                 <form action="#" class="form-container">
-                    <input id="input_ip_address" name="input_ip_address" type="text">
+                    <input placeholder="Enter a valid Ip Address e.g 192.200.150.101" id="input_ip_address" name="input_ip_address" type="text">
                     <button type="submit" class="submit-btn">
                         <img src="../images/icon-arrow.svg" alt="" class="btn-img">
                     </button>
@@ -44,25 +44,25 @@
             <section class="location__card">
                 <!-- ip address -->
                 <div class="location-info--subheader">
-                    <h6>IP ADDRESS</h6>
-                    <p class="location-info-contents">192.212.174.101</p>
+                    <h6 class="ip__address">IP ADDRESS</h6>
+                    <p class="location-info-contents ip__number">192.212.174.101</p>
                 </div>
                 <!-- location -->
                 <div class="location-info--subheader">
-                    <h6>IP ADDRESS</h6>
-                    <p class="location-info-contents">192.212.174.101</p>
+                    <h6 class="ip__location__header">Location</h6>
+                    <p class="location-info-contents ip__location ">Brooklyn,NY 10001</p>
                 </div>
                 
                 <!-- timezone -->
                 <div class="location-info--subheader">
-                    <h6>IP ADDRESS</h6>
-                    <p class="location-info-contents">192.212.174.101</p>
+                    <h6 class="timezone">Timezone</h6>
+                    <p class="location-info-contents ip_timezone">UTC_05:00</p>
                 </div>
                 
                 <!-- isp -->
-                <div class="location-info--subheader">
-                    <h6>IP ADDRESS</h6>
-                    <p class="location-info-contents">192.212.174.101</p>
+                <div class="location-info--subheader ">
+                    <h6 class="network__provider">ISP</h6>
+                    <p class="location-info-contents provider">SpaceX Starlink</p>
             </div>
             
         </section>
@@ -70,9 +70,9 @@
     </section>
     <!-- ui content ends here -->
 
-        <section>
-            <div id="show-map" class="show-map">
-            </div>
+        <section class="map">
+            <!-- <div id="show-map" class="show-map loading">
+            </div> -->
         </section>
 
     </main>

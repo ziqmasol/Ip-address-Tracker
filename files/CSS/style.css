@@ -1,26 +1,4 @@
-/* ## Colors
-
-- Very Dark Gray: hsl(0, 0%, 17%)
-- Dark Gray: hsl(0, 0%, 59%) */
-
-/* reset */
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-::after , ::before ,*{
-    box-sizing: border-box;
-}
-
-/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-html{
-    font-size: 100%;
-}
-/* 16px */
-
 
 :root{
     /* .rubik-<uniquifier> {
@@ -40,7 +18,47 @@ html{
     /* primary */
     --contentColor: lightgrey;
     --fadelightgrey: grey;
-    --fontWeight:700
+    --fontWeight:700;
+
+    /* shadows */
+
+    --shadow-1:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-2:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  /* hovering state */
+  --shadow-3:box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-4:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+
+}
+
+
+
+
+/* ## Colors
+
+- Very Dark Gray: hsl(0, 0%, 17%)
+- Dark Gray: hsl(0, 0%, 59%) */
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::after , ::before ,*{
+    box-sizing: border-box;
+}
+
+/* fonts */
+
+/* 16px */
+
+
+
+html{
+    font-size: 100%;
+    font-family: var(--headingfont);
 
 }
 
@@ -90,12 +108,18 @@ p {margin-bottom: .9rem;
 /* genral ui */
 
 .gen__ui{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     /* width: 100vw; */
-    background-color: lightblue;
+    /* background-color: lightblue; */
     position: relative;
     
     
+}
+
+.location__popup{
+    /* width: 60px; */
+    height: 20px;
+    text-align: center;
 }
 
 .upper_img{
@@ -111,7 +135,7 @@ display: none;
 /* ui-content */
 
 .ui_content{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* height: 400px; */
     margin:0 auto;
     text-align: center;
@@ -122,7 +146,7 @@ display: none;
     width: 85vw;
     max-width: 600px;
     position: absolute;
-    top: 100px;
+    top: 0px;
     left:50% ;
     transform: translate(-50%);
     z-index: 1000;
@@ -152,7 +176,9 @@ display: none;
     display: flex;
     align-items: center;
     height: 70px;
-}
+    justify-content: center;
+    
+    }
 .form-container input[type="text"] {
     flex: 1;
     padding: 10px;
@@ -161,7 +187,9 @@ display: none;
     height: 100%;
     outline: none;
     font-weight: bold;
-}
+    box-shadow: var(--shadow-1);
+    
+    }
 .form-container button[type="submit"] {
     padding: 10px;
     background-color:black;
@@ -184,6 +212,11 @@ display: none;
     transform: translateY(2px);
 }
 
+::placeholder{
+    color: green;
+    text-align: center;
+}
+
 /* location card */
 
 .location__card{
@@ -191,16 +224,16 @@ display: none;
     margin: auto;
     /* width: 70%; */
     padding: .9rem;
-    
-}
-
-.location__card{
-    border: 2px solid green;
     margin-bottom: 0;
     background-color: white;
     border-radius: 25px;
-    /* font-size: 1.5rem; */
+    /* background-color: red; */
+    box-shadow: var(--shadow-4);
+    
+    
 }
+
+
 
 
 
@@ -220,11 +253,56 @@ h6{
 }
 
 /* show map */
-.show-map{
+.map{
     height: calc(100vh - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     /* min-height: 600px; */
 }
+
+.show-map{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.error-msg{
+    box-shadow: -2px -2px 16px 2px rgb(255, 0, 0 , 0.765);
+
+    }
+
+
+
+/* loading */
+
+/* loading */
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+
+    }
+}
+
+
+/* .map{
+    display: flex;} */
+
+.loading{
+    margin-top:2rem;
+    width:6rem;
+    height:6rem;
+    border:5px solid lightgrey;
+    border-top-color: gray;
+    border-radius:50%;
+    animation: spin 0.6s linear infinite;
+    margin: auto
+} 
+
+
 
 
 /* desktop resolution */
@@ -233,10 +311,12 @@ h6{
     .gen__ui{
         max-width: 1120px;
         margin: auto;
+        width: 90vw;
     }
    .desktop{
     display: block;
     color:blue;
+    /* width: 80vw; */
    }
    .mobile{
     display: none;
@@ -245,7 +325,7 @@ h6{
    .ui_content{
     max-width: 800px;
     /* width: 70vw; */
-    top: 50px;
+    top: 40px;
    }
 
    .location__card{
