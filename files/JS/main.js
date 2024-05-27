@@ -150,13 +150,13 @@ btn.addEventListener("click" , function(e){
 
 // callingIpAddress("192.212.174.101")
 
-function getUserDefaultIp(callbaack){
+function getUserDefaultIp(callback){
 
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
       console.log('Your Public IP Address:', data.ip);
-      callbaack(data.ip)
+      callback(data.ip)
     })
     .catch(error => {
       console.error('Error fetching IP:', error);
