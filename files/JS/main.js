@@ -56,7 +56,7 @@ async function callingIpAddress (ipAddress){
         if (!response.ok) throw new Error('Problem getting location data');
         if(response.ok){
             const data = await response.json()
-            console.log("from ip address")
+            // console.log("from ip address")
 
             
         //  loading.classList.remove('loading')
@@ -70,7 +70,7 @@ async function callingIpAddress (ipAddress){
         // leaflet
         //  let salam = true
         function getLocation(data){
-            console.log(data, "line 74 salam ")
+            // console.log(data, "line 74 salam ")
             function createMapElement(tag){
                 const mapSection = document.querySelector(".map")
                 mapSection.innerHTML =``
@@ -81,7 +81,7 @@ async function callingIpAddress (ipAddress){
                 mapElement.setAttribute('class' , "show-map")
                 
                 mapSection.appendChild(mapElement)
-                console.log(mapSection,mapElement)
+                // console.log(mapSection,mapElement)
                 // return mapElement
             }
 
@@ -94,12 +94,12 @@ async function callingIpAddress (ipAddress){
             //     console.log("removed")
             //     mapSection.removeChild()
             // }
-            console.log( "from get location 1")
+            // console.log( "from get location 1")
             createMapElement("div")
              map = L.map('show-map').setView(coord__location, 10);
 
             // console.log(map , "I am salam")
-            console.log( "from get location 2")
+            // console.log( "from get location 2")
 
                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                    maxZoom: 15,
