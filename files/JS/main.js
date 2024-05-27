@@ -138,7 +138,7 @@ async function callingIpAddress (ipAddress){
 // }
 
 // callingIpAddress("102.89.23.227")
-callingIpAddress("129.205.113.179")
+// callingIpAddress("129.205.113.179")
 
 
 btn.addEventListener("click" , function(e){
@@ -150,16 +150,20 @@ btn.addEventListener("click" , function(e){
 
 // callingIpAddress("192.212.174.101")
 
+function getUserDefaultIp(callbaack){
 
-fetch('https://api.ipify.org?format=json')
-.then(response => response.json())
-.then(data => {
-  console.log('Your Public IP Address:', data.ip);
-  callingIpAddress(data.ip)
-})
-.catch(error => {
-  console.error('Error fetching IP:', error);
-});
+    fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Your Public IP Address:', data.ip);
+      callbaack(data.ip)
+    })
+    .catch(error => {
+      console.error('Error fetching IP:', error);
+    });
+}
+getUserDefaultIp(callingIpAddress)
+
 
 
 // https://geo.ipify.org/api/v2/country,city?apiKey=at_7DjECNW0YdO0D3F17jFbCfyO9o4CA&ipAddress=
